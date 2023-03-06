@@ -30,6 +30,9 @@ class Movies
     #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'movies')]
     private $reviews;
 
+    #[ORM\OneToMany(targetEntity: Users::class, mappedBy: 'movies')]
+    private $users;
+
     public function getId(): ?int
     {
         return $this->id;

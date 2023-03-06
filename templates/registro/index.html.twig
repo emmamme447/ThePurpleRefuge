@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block body %}
+{% form_theme formulario 'bootstrap_5_layout.html.twig' %}
+
+{{ parent() }}
+
+{% for message in app.flashes('exito') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+
+
+<div class="example-wrapper">
+    <h1>Welcome to The Purple Refuge, {{ controller_name }}!</h1>
+    <h2>{{ welcome_message }}</h2>
+    <h2>{{ welcome_message2 }}</h2>
+
+    <ul>
+        <li>Your list of series to watch, here <code><a href="{{ 'https://www.elle.com/es/living/ocio-cultura/g39322602/mejores-series-feministas/'|file_link(0) }}">Series</a></code></li>
+        <li>Your list of movies to watch, here <code><a href="{{ 'https://www.fotogramas.es/noticias-cine/g19450789/30-de-las-mejores-peliculas-feministas-de-la-historia/'|file_link(0) }}">Movies</a></code></li>
+        <li>Your list of books to read, here <code><a href="{{ 'https://www.esquire.com/es/actualidad/libros/g26706081/mejores-libros-feministas/'|file_link(0) }}">Books</a></code></li>
+    </ul>
+    {{ form(formulario) }}
+</div>
+{% endblock %}

@@ -33,8 +33,7 @@ class Reviews
     #[ORM\ManyToOne(targetEntity: Books::class, inversedBy: 'reviews')]
     private $books;
 
-
-
+    
 
     public function getId(): ?int
     {

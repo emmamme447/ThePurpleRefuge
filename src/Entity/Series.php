@@ -29,6 +29,10 @@ class Series
     #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'series')]
     private $reviews;
 
+    #[ORM\OneToMany(targetEntity: Users::class, mappedBy: 'series')]
+    private $users;
+
+
 
 
 

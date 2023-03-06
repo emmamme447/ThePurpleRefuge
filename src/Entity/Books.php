@@ -27,6 +27,9 @@ class Books
     #[ORM\OneToMany(targetEntity: Reviews::class, mappedBy: 'books')]
     private $reviews;
 
+    #[ORM\OneToMany(targetEntity: Users::class, mappedBy: 'books')]
+    private $users;
+
 
 
     public function getId(): ?int
