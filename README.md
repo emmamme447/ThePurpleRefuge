@@ -1,2 +1,2 @@
 # ThePurpleRefuge
-Proyecto de registro de entidades.
+Proyecto de biblioteca pública.
